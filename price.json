@@ -1,0 +1,17 @@
+{
+  "Pepperoni": {
+    "name": "Пиперони",
+    "price": 300
+  },
+  "Hawaiian": {
+    "name": "Гавайская",
+    "price": 500
+  },
+  "FourChesses": {
+    "name": "Четыре сыра", 
+    "price": 450
+  },
+  "delivery": 100,
+  "TwoPizza": 0.9,
+  "MoreThree": 0.85
+}

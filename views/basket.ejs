@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Корзина</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <script>
+    </script>
+  </head>
+  <body>
+    <%- include ('./blocks/header-basket.ejs') %>
+    <div class="selection orange lighten-1 start-section">
+      <% if (price && name) { %>
+      <div class="conteiner">
+        <form method="POST" action="/">
+          <p><b>Название: </b><input name="a" readonly value="<%= name %>" type="text" class="validate"></p>
+          <p><b>Кол-во: </b><input name="b" readonly value="<%= quantity %>" type="text" class="validate"></p>
+          <p><b>Итоговая цена: </b><input name="c" readonly value="<%= price %>" type="text" class="validate"></p>
+          <p><b>Адрес доставки: </b><input name="d" readonly value="<%= address %>" type="text" class="validate"></p>
+          <button type="submit" class="waves-effect waves-light btn">Подтвердить заказ</button>
+        </form>
+      </div>
+      <% } else { %>
+      <div class="selection orange lighten-1 start-section">
+        <div class="conteiner">
+          <h1 class="center">Сейчас корзина пустая</h1>
+        </div>
+      </div>
+      <% } %>
+    </div>
+    <%- include ('./blocks/buttom.ejs') %>
+  </body>
+</html>

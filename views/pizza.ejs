@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Доставка пиццы</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/public/css/style.css">
+  </head>
+  <body>
+    <%- include ('./blocks/header.ejs') %>
+    <div class="selection orange lighten-1 start-section">
+      <div class="conteiner">
+        <form method="POST" action="/basket">
+          <select required name="names" class="browser-default">
+            <option value="0" disabled hidden selected>Выберите пиццу</option>
+            <option value="Pepperoni">Пипперони - 300</option>
+            <option value="Hawaiian">Гавайская - 500</option>
+            <option value="FourChesses">Четыре сыра - 450</option>
+          </select>
+          <input required placeholder="Количество" name="quantity" min="0" max="10" type="number">
+          <input required placeholder="Адрес" name="address" type="text">
+          <div class="center">
+            <button name="order" type="submit" class="waves-effect waves-light btn">Заказать</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <%- include ('./blocks/buttom.ejs') %>
+  </body>
+</html>
